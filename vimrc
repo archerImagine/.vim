@@ -42,3 +42,26 @@ let &path.="/usr/include/,"
 " http://www.alexeyshmalko.com/2014/youcompleteme-ultimate-autocomplete-plugin-for-vim/
 " In order to auto-complete source code for C family, you should provide custom .ycm_extra_conf.py file for your project. If you don’t do this, YCM will be unable to use semantic completion.
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+"NERDTree plugin configuration.
+
+
+"open a NERDTree automatically when vim starts up
+autocmd vimenter * NERDTree
+
+"open a NERDTree automatically when vim starts up if no files were specified
+autocmd vimenter * if !argc() | NERDTree | endif
+
+"map a specific key or shortcut to open NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+"close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"cursor always starts in the NERDTree window
+"http://stackoverflow.com/questions/1447334/how-do-you-add-nerdtree-to-your-vimrc
+autocmd VimEnter * wincmd p
+"Easy window navigation, Just use CTRL + hjkl for navigation inplace of CTRL + W
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
