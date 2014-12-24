@@ -19,3 +19,13 @@ else
     set background=light "Seting light in termial is not working for non-gui
 endif
 
+" http://www.alexeyshmalko.com/2014/using-vim-as-c-cpp-ide/
+" set indentation rules
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
+
+
+
