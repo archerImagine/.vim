@@ -3,3 +3,6 @@
 	url = git://github.com/altercation/vim-colors-solarized.git
 	ignore = dirty
 
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = ../../Valloric/YouCompleteMe.git

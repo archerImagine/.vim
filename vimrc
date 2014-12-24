@@ -38,3 +38,7 @@ augroup END
 " using the gF command to open File from system.
 
 let &path.="/usr/include/,"
+
+" http://www.alexeyshmalko.com/2014/youcompleteme-ultimate-autocomplete-plugin-for-vim/
+" In order to auto-complete source code for C family, you should provide custom .ycm_extra_conf.py file for your project. If you don’t do this, YCM will be unable to use semantic completion.
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
