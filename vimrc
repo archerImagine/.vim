@@ -33,3 +33,8 @@ augroup project
     autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
 augroup END
 
+
+" Setting path variable
+" using the gF command to open File from system.
+
+let &path.="/usr/include/,"
