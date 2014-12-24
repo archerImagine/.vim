@@ -27,5 +27,9 @@ set softtabstop=4
 set shiftwidth=4
 set noexpandtab
 
-
+" File-type detection
+augroup project
+    autocmd!
+    autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
+augroup END
 
